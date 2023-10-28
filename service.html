@@ -19,14 +19,21 @@
 
 <body>
 	<header class="header">
-    <div class="logo">
-        <div class="image">
-            <a href="index.html">
-                <img src="img/header-logo.png" alt="">
-            </a>
+    <div class="logo__wrapper">
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">
+            <div class="image">
+                <a href="index.html">
+                    <img src="img/header-logo.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
-    <nav>
+    <nav class="nav__desctop">
         <ul>
             <li class="dropdown">
                 <a href="#">О клинике</a>
@@ -34,7 +41,7 @@
                     <li><a href="price.html">Цены</a></li>
                     <li><a href="doctors.html">Доктора</a></li>
                     <li><a href="feedback.html">Отзывы</a></li>
-                    <li><a href="ertificate.html">Лицензии</a></li>
+                    <li><a href="certificate.html">Лицензии</a></li>
                     <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
                 </ul>
             </li>
@@ -64,8 +71,60 @@
             </li>
         </ul>
     </nav>
+    <nav class="nav__mobile" id="nav__mobile">
+        <ul>
+            <li class="tel">
+                <div>
+                    <a href="#">+7 925 944-04-04</a>
+                    <span>Ежедневно с 10:00 до 21:00</span>
+                </div>
+                <div class="close-btn">
+                    <img src="img/close.svg" alt="">
+                </div>
+            </li>
+            <li class="dropdown toggler">
+                <a href="#">
+                    <span>О клинике</span>
+                    <span><img src="img/dropdown.png" alt=""></span>
+                </a>
+                <ul>
+                    <li><a href="price.html">Цены</a></li>
+                    <li><a href="doctors.html">Доктора</a></li>
+                    <li><a href="feedback.html">Отзывы</a></li>
+                    <li><a href="certificate.html">Лицензии</a></li>
+                    <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
+                </ul>
+            </li>
+            <li class="dropdown toggler">
+                <a href="#">
+                    <span>Услуги</span>
+                    <span><img src="img/dropdown.png" alt=""></span>
+                </a>
+                <ul>
+                    <li><a href="cosmetology.html">Косметология</a></li>
+                    <li><a href="#">Дерматологи</a></li>
+                    <li><a href="#">Эндокринология</a></li>
+                    <li><a href="#">Гинекология</a></li>
+                    <li><a href="#">Анализы крови</a></li>
+                </ul>
+            </li>
+            <li class="dropdown toggler">
+                <a href="#">
+                    <span>Интернет-магазин</span>
+                    <span><img src="img/dropdown.png" alt=""></span>
+                </a>
+                <ul>
+                    <li><a href="#">О косметике</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Обучение</a></li>
+            <li><a href="#">Контакты</a></li>
+            
+        </ul>
+    </nav>
 </header>
-
 	<main class="main">
 
 		<div class="text-with-image-block">
