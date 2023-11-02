@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="@@description">
+	<meta name="keywords" content="@@keywords">
+	<link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
+	<link rel="shortcut icon" href="@@favicon.webp" type="image/webp">
+	<link rel="shortcut icon" href="@@favicon.png" type="image/x-icon">
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Офромление заказа</title>
+</head>
+
+<body>
+	<header class="header">
+    <div class="logo__wrapper">
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">
+            <div class="image">
+                <a href="index.html">
+                    <img src="img/header-logo.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="nav__desctop">
+        <ul>
+            <li class="dropdown">
+                <a href="#">О клинике</a>
+                <ul>
+                    <li><a href="price.html">Цены</a></li>
+                    <li><a href="doctors.html">Доктора</a></li>
+                    <li><a href="feedback.html">Отзывы</a></li>
+                    <li><a href="certificate.html">Лицензии</a></li>
+                    <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Услуги</a>
+                <ul>
+                    <li><a href="cosmetology.html">Косметология</a></li>
+                    <li><a href="#">Дерматологи</a></li>
+                    <li><a href="#">Эндокринология</a></li>
+                    <li><a href="#">Гинекология</a></li>
+                    <li><a href="#">Анализы крови</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Интернет-магазин</a>
+                <ul>
+                    <li><a href="#">О косметике</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Обучение</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li class="flex">
+                <a href="#">
+                    <img src="img/cart-img.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/search-img.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="nav__mobile" id="nav__mobile">
+        <ul>
+            <li class="tel">
+                <div>
+                    <a href="#">+7 925 944-04-04</a>
+                    <span>Ежедневно с 10:00 до 21:00</span>
+                </div>
+                <div class="close-btn">
+                    <img src="img/close.svg" alt="">
+                </div>
+            </li>
+            <li class="dropdown toggler">
+                <a href="#">
+                    <span>О клинике</span>
+                    <span><img src="img/dropdown.png" alt=""></span>
+                </a>
+                <ul>
+                    <li><a href="price.html">Цены</a></li>
+                    <li><a href="doctors.html">Доктора</a></li>
+                    <li><a href="feedback.html">Отзывы</a></li>
+                    <li><a href="certificate.html">Лицензии</a></li>
+                    <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
+                </ul>
+            </li>
+            <li class="dropdown toggler">
+                <a href="#">
+                    <span>Услуги</span>
+                    <span><img src="img/dropdown.png" alt=""></span>
+                </a>
+                <ul>
+                    <li><a href="cosmetology.html">Косметология</a></li>
+                    <li><a href="#">Дерматологи</a></li>
+                    <li><a href="#">Эндокринология</a></li>
+                    <li><a href="#">Гинекология</a></li>
+                    <li><a href="#">Анализы крови</a></li>
+                </ul>
+            </li>
+            <li class="dropdown toggler">
+                <a href="#">
+                    <span>Интернет-магазин</span>
+                    <span><img src="img/dropdown.png" alt=""></span>
+                </a>
+                <ul>
+                    <li><a href="#">О косметике</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Обучение</a></li>
+            <li><a href="#">Контакты</a></li>
+            
+        </ul>
+    </nav>
+</header>
+	<main class="main">
+
+		<div class="title__block">
+			<span class="subtitle">Интернет-магазин</span>
+			<h1>Оформление заказа</h1>
+		</div>
+
+		<div class="cart__nav margins">
+			<a href="cart.html">Корзина</a>
+			<a href="#" class="active">Оформление заказа</a>
+		</div>
+
+		<div class="ordering__block margins">
+			<div class="content__block">
+				<div class="deliver__block">
+					<h4>Доставка</h4>
+					<div class="grid-lg">
+						<div class="form_radio">
+							<input id="radio-1" type="radio" name="radio" value="1" checked>
+							<label for="radio-1">
+								<span class="name">Самовывоз</span>
+								<span class="sm-text">г. Москва, Крымский вал, дом 3, строение 2, офис 203</span>
+								<span class="sm-text">Пн-вск: с 1000 до 2000</span>
+							</label>
+						</div>
+						<div class="form_radio">
+							<input id="radio-2" type="radio" name="radio" value="1" checked>
+							<label for="radio-2">
+								<span class="name">Доставка по Москве</span>
+								<span class="sm-text">СДЭК (курьер) – в течение 2-3 дней</span>
+								<span class="sm-text">Дата согласовывается с менеджером после оформления заказа</span>
+								<span class="price">350 ₽</span>
+							</label>
+						</div>
+						<div class="form_radio">
+							<input id="radio-3" type="radio" name="radio" value="1" checked>
+							<label for="radio-3">
+								<span class="name">Доставка по Москве</span>
+								<span class="sm-text">СДЭК (курьер) – в течение 2-3 дней</span>
+								<span class="sm-text">Дата согласовывается с менеджером после оформления заказа</span>
+								<span class="price">350 ₽</span>
+							</label>
+						</div>
+						<div class="form_radio">
+							<input id="radio-4" type="radio" name="radio" value="1" checked>
+							<label for="radio-4">
+								<span class="name">Доставка по Москве</span>
+								<span class="sm-text">СДЭК (курьер) – в течение 2-3 дней</span>
+								<span class="sm-text">Дата согласовывается с менеджером после оформления заказа</span>
+								<span class="sm-text">Дата согласовывается с менеджером </span>
+								<span class="price">350 ₽</span>
+							</label>
+						</div>
+						<div class="form_radio">
+							<input id="radio-5" type="radio" name="radio" value="1" checked>
+							<label for="radio-5">
+								<span class="name">Самовывоз</span>
+								<span class="sm-text">г. Москва, Крымский вал, дом 3, строение 2, офис 203</span>
+								<span class="sm-text">Пн-вск: с 1000 до 2000</span>
+							</label>
+						</div>
+						<div class="form_radio">
+							<input id="radio-6" type="radio" name="radio" value="1" checked>
+							<label for="radio-6">
+								<span class="name">Доставка по Москве</span>
+								<span class="sm-text">СДЭК (курьер) – в течение 2-3 дней</span>
+								<span class="sm-text">Дата согласовывается с менеджером после оформления заказа</span>
+								<span class="price">350 ₽</span>
+							</label>
+						</div>
+						<div class="form_radio">
+							<input id="radio-7" type="radio" name="radio" value="1" checked>
+							<label for="radio-7">
+								<span class="name">Доставка по Москве</span>
+								<span class="sm-text">СДЭК (курьер) – в течение 2-3 дней</span>
+								<span class="sm-text">Дата согласовывается с менеджером после оформления заказа</span>
+								<span class="price">350 ₽</span>
+							</label>
+						</div>
+						<div class="form_radio">
+							<input id="radio-8" type="radio" name="radio" value="1" checked>
+							<label for="radio-8">
+								<span class="name">Доставка по Москве</span>
+								<span class="sm-text">СДЭК (курьер) – в течение 2-3 дней</span>
+								<span class="sm-text">Дата согласовывается с менеджером после оформления заказа</span>
+								<span class="sm-text">Дата согласовывается с менеджером </span>
+								<span class="price">350 ₽</span>
+							</label>
+						</div>
+						<input class="addres add1" type="text" placeholder="Адрес*">
+						<input class="addres" type="text" placeholder="Квартира/офис">
+					</div>
+				</div>
+				<div class="personal__info">
+					<h4>Личные данные</h4>
+					<div class="grid">
+						<input type="text" placeholder="Ваше имя*">
+						<input type="tel" placeholder="Телефон*">
+						<input type="email" placeholder="E-mail*">
+					</div>
+				</div>
+				<div class="pay__block">
+					<h4>Оплата</h4>
+					<div class="grid">
+						<div class="form_radio">
+							<input id="radio-1" type="radio" name="radio" value="1" checked>
+							<label for="radio-1">Оплата банковской картой на сайте</label>
+						</div>
+
+						<div class="form_radio">
+							<input id="radio-2" type="radio" name="radio" value="2">
+							<label for="radio-2">Платежная ссылка. Онлайн-оплата после согласования заказа</label>
+						</div>
+
+						<div class="form_radio">
+							<input id="radio-3" type="radio" name="radio" value="3">
+							<label for="radio-3">Прямой банковский перевод по реквизитам</label>
+						</div>
+					</div>
+				</div>
+				<div class="cart__block">
+					<h4>Корзина</h4>
+					<div class="cart__items__wrapper">
+						<div class="nav">
+							<div>
+								Товар
+							</div>
+							<div>
+								Детали
+							</div>
+							<div>
+								Цена
+							</div>
+							<div>
+								Количество
+							</div>
+							<div>
+								Стоимость
+							</div>
+						</div>
+						<div class="cart__items">
+							<div class="item">
+								<div class="close">
+									<a href="#"><img src="img/del.png" alt=""></a>
+								</div>
+								<div class="item__content">
+									<div class="image">
+										<img src="img/cart-item.png" alt="">
+									</div>
+									<div class="name">
+										<h4>Крем для век, придающий сияние 30 мл</h4>
+									</div>
+									<div class="price">
+										2 850 ₽
+									</div>
+									<div class="counter">
+										<div class="quantity_inner">
+											<button class="bt_minus">-</button>
+											<input type="text" class="quantity" value="1" data-max-count="100">
+											<button class="bt_plus">+</button>
+										</div>
+									</div>
+									<div class="price">2 850 ₽</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="close">
+									<a href="#"><img src="img/del.png" alt=""></a>
+								</div>
+								<div class="item__content">
+									<div class="image">
+										<img src="img/cart-item.png" alt="">
+									</div>
+									<div class="name">
+										<h4>Крем для век, придающий сияние 30 мл</h4>
+									</div>
+									<div class="price">
+										2 850 ₽
+									</div>
+									<div class="counter">
+										<div class="quantity_inner">
+											<button class="bt_minus">-</button>
+											<input type="text" class="quantity" value="1" data-max-count="100">
+											<button class="bt_plus">+</button>
+										</div>
+									</div>
+									<div class="price">2 850 ₽</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="close">
+									<a href="#"><img src="img/del.png" alt=""></a>
+								</div>
+								<div class="item__content">
+									<div class="image">
+										<img src="img/cart-item.png" alt="">
+									</div>
+									<div class="name">
+										<h4>Крем для век, придающий сияние 30 мл</h4>
+									</div>
+									<div class="price">
+										2 850 ₽
+									</div>
+									<div class="counter">
+										<div class="quantity_inner">
+											<button class="bt_minus">-</button>
+											<input type="text" class="quantity" value="1" data-max-count="100">
+											<button class="bt_plus">+</button>
+										</div>
+									</div>
+									<div class="price">2 850 ₽</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right-sidebar">
+				<div class="flex --just-space">
+					<span>Сумма</span>
+					<span>7 690 ₽</span>
+				</div>
+				<div class="button-red-border"><a href="#">оформить заказ</a></div>
+			</div>
+		</div>
+
+		<div class="cart__wrapper margins">
+
+
+		</div>
+	</main>
+	<footer class="footer">
+    <div class="line"></div>
+    <div class="footer__content paddings">
+        <div class="logo">
+            <img src="img/header-logo.png" alt="">
+        </div>
+        <div class="grid__block">
+            <div class="item">
+                <h4>О клинике</h4>
+                <ul>
+                    <li><a href="price.html">Цены</a></li>
+                    <li><a href="doctors.html">Доктора</a></li>
+                    <li><a href="feedback.html">Отзывы</a></li>
+                    <li><a href="ertificate.html">Лицензии</a></li>
+                    <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="#">Цены</a></li>
+                    <li><a href="#">Доктора</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Лицензии</a></li>
+                    <li><a href="#">Обучение</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>Интернет-магазин</h4>
+                <ul>
+                    <li><a href="#">Цены</a></li>
+                    <li><a href="#">Доктора</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Лицензии</a></li>
+                    <li><a href="#">Обучение</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                    <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                    <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                    <li class="mail"><a href="mailto:hello@akaram.ru">hello@akaram.ru</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-text flex --just-space paddings">
+        <p class="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis impedit ratione, repellat libero velit
+            labore molestiae laudantium itaque minima vero, magni numquam vel, eius ducimus illum maxime ipsam quo
+            dolore.
+        </p>
+        <a href="#">Пользовательское соглашение</a>
+        <a href="#">Публичная оферта</a>
+    </div>
+</footer>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
