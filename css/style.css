@@ -1748,13 +1748,25 @@ ul {
 .price__block {
   margin-top: 100px;
   padding: 0 55px;
+  
+}
+.price__block .tabs-wrapper{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
-.price__block .mobile__option {
+/* .price__block .tabs-content-mob {
   display: none;
+} */
+.price__block .toggler ul{
+  display: none;
+}
+.price__block .open ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f7f3f1;
 }
 .price__block .mobile__option select {
   width: 100%;
@@ -1788,13 +1800,12 @@ ul {
 .price__block .sidebar ul li {
   position: relative;
   width: 100%;
-}
-.price__block .sidebar ul li a {
   font-size: 16px;
   color: #191000;
   font-weight: 400;
+  cursor: pointer;
 }
-.price__block .sidebar ul .active a {
+.price__block .sidebar ul .active {
   color: #f04d58;
 }
 .price__block .sidebar ul .active::before {
@@ -1806,9 +1817,11 @@ ul {
   width: 1px;
   background-color: #f04d58;
 }
-.price__block-info {
+.price__block .tabs-content{
   -ms-flex-preferred-size: 70%;
   flex-basis: 70%;
+}
+.price__block-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3695,11 +3708,16 @@ ul {
   .price__block {
     margin-top: 50px;
     gap: 20px;
+    padding: 0 34px;
+  }
+  .price__block .tabs-wrapper{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 0 34px;
+  }
+  .price__block .tabs-content{
+    flex-basis: 100%;
   }
   .price__block .mobile__option {
     display: block;
