@@ -2,23 +2,13 @@ Fancybox.bind('[data-fancybox="gallery"]', {})
 $(".logo__wrapper").on("click", ".burger", function () {
   $(".nav__mobile").show("slide", { direction: "right" }), $("body").css("overflow", "hidden");
 }),
-$(".close-btn").click(function () {
-  $(".nav__mobile").hide("slide", { direction: "right" }), $("body").css("overflow", "auto");
-}),
-$(".tabs-wrapper").each(function () {
-  let e = $(this);
-  e.find(".tab-item").not(":first").hide(),
-    e
-      .find(".tab")
-      .click(function () {
-        e.find(".tab").removeClass("active").eq($(this).index()).addClass("active"), e.find(".tab-item").hide().eq($(this).index()).fadeIn();
-      })
-      .eq(0)
-      .addClass("active");
-}),
-$(".toggler").click(function () {
-  $(this).next("ul").toggle(200), $(this).toggleClass("open");
-});
+  $(".close-btn").click(function () {
+    $(".nav__mobile").hide("slide", { direction: "right" }), $("body").css("overflow", "auto");
+  }),
+
+  $(".toggler").click(function () {
+    $(this).next("ul").toggle(200), $(this).toggleClass("open");
+  });
 var swiper0 = new Swiper(".mainSlider", { slidesPerView: 1, spaceBetween: 0, navigation: { nextEl: ".main-next", prevEl: ".main-prev" } }),
   swiper = new Swiper(".staffSlider", {
     slidesPerView: 4,
@@ -72,3 +62,32 @@ $(".close").click(function () {
   $(".popup").fadeOut(500);
   $("body").removeClass("fix")
 });
+
+const screenWidth = window.screen.width
+const mobile = document.querySelector('.mobile')
+const desctop = document.querySelector('.desctop')
+
+function getScreenWidth() {
+  if (screenWidth > 768) {
+    desctop.classList.add('visible')
+    $(".tabs-wrapper").each(function () {
+      let e = $(this);
+      e.find(".tab-item").not(":first").hide(),
+        e
+          .find(".tab")
+          .click(function () {
+            e.find(".tab").removeClass("active").eq($(this).index()).addClass("active"), e.find(".tab-item").hide().eq($(this).index()).fadeIn(50);
+          })
+          .eq(0)
+          .addClass("active");
+    })
+  } else {
+    mobile.classList.add('visible')
+    $(".select").change(function () {
+      $('.tab-item').removeClass("active");
+      var SelectOption = $(".select").val();
+      $(".tab-item[data-tab=" + SelectOption + "]").addClass("active");
+    });
+  }
+}
+getScreenWidth()
