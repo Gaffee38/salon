@@ -2,269 +2,273 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="@@description">
-	<meta name="keywords" content="@@keywords">
-	<link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
-	<link rel="shortcut icon" href="@@favicon.webp" type="image/webp">
-	<link rel="shortcut icon" href="@@favicon.png" type="image/x-icon">
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-	
-	<link rel="stylesheet" href="css/libs.min.css">
-	<link rel="stylesheet" href="css/style.min.css">
-	<title>Шаблон</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@@description">
+    <meta name="keywords" content="@@keywords">
+    <link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="@@favicon.webp" type="image/webp">
+    <link rel="shortcut icon" href="@@favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Шаблон</title>
 </head>
 
 <body>
-	<header class="header">
-    <div class="logo__wrapper">
-        <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="logo">
-            <div class="image">
-                <a href="index.html">
-                    <img src="img/header-logo.png" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-    <nav class="nav__desctop">
-        <ul>
-            <li class="dropdown">
-                <a href="#">О клинике</a>
-                <ul>
-                    <li><a href="price.html">Цены</a></li>
-                    <li><a href="doctors.html">Доктора</a></li>
-                    <li><a href="feedback.html">Отзывы</a></li>
-                    <li><a href="certificate.html">Лицензии</a></li>
-                    <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Услуги</a>
-                <ul>
-                    <li><a href="cosmetology.html">Косметология</a></li>
-                    <li><a href="#">Дерматологи</a></li>
-                    <li><a href="#">Эндокринология</a></li>
-                    <li><a href="#">Гинекология</a></li>
-                    <li><a href="#">Анализы крови</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Интернет-магазин</a>
-                <ul>
-                    <li><a href="#">О косметике</a></li>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Обучение</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li class="tel">
-                <a href="#">+7 925 944-04-04</a>
-                <span>Ежедневно с 10:00 до 21:00</span>
-            </li>
-        </ul>
-    </nav>
-    <nav class="nav__mobile" id="nav__mobile">
-        <ul>
-            <li class="tel">
-                <div>
-                    <a href="#">+7 925 944-04-04</a>
-                    <span>Ежедневно с 10:00 до 21:00</span>
+    <div class="body-wrapper">
+        <header class="header">
+            <div class="logo__wrapper">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="close-btn">
-                    <img src="img/close.svg" alt="">
+                <div class="logo">
+                    <div class="image">
+                        <a href="index.html">
+                            <img src="img/header-logo.png" alt="">
+                        </a>
+                    </div>
                 </div>
-            </li>
-            <li class="dropdown toggler">
-                <a href="#">
-                    <span>О клинике</span>
-                    <span><img src="img/dropdown.png" alt=""></span>
-                </a>
-                <ul>
-                    <li><a href="price.html">Цены</a></li>
-                    <li><a href="doctors.html">Доктора</a></li>
-                    <li><a href="feedback.html">Отзывы</a></li>
-                    <li><a href="certificate.html">Лицензии</a></li>
-                    <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
-                </ul>
-            </li>
-            <li class="dropdown toggler">
-                <a href="#">
-                    <span>Услуги</span>
-                    <span><img src="img/dropdown.png" alt=""></span>
-                </a>
-                <ul>
-                    <li><a href="cosmetology.html">Косметология</a></li>
-                    <li><a href="#">Дерматологи</a></li>
-                    <li><a href="#">Эндокринология</a></li>
-                    <li><a href="#">Гинекология</a></li>
-                    <li><a href="#">Анализы крови</a></li>
-                </ul>
-            </li>
-            <li class="dropdown toggler">
-                <a href="#">
-                    <span>Интернет-магазин</span>
-                    <span><img src="img/dropdown.png" alt=""></span>
-                </a>
-                <ul>
-                    <li><a href="#">О косметике</a></li>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Обучение</a></li>
-            <li><a href="#">Контакты</a></li>
-            
-        </ul>
-    </nav>
-</header>
-	<main class="main">
-
-		<div class="title__block">
-            <span class="subtitle"></span>
-            <h1></h1>
-        </div>
-
-		
-
-		<div class="map__block">
-			<h2 class="paddings">Контакты</h2>
-			<div class="map-with-block">
-				<div class="info__block__wrapper">
-					<div class="info__block">
-						<div class="item">
-							<span>г. Москва, Крымский вал, дом 3, строение 2, офис 203</span>
-							<span>м. «Октябрьская», кольцевая линия</span>
-						</div>
-						<div class="item">
-							<span>
-								<a href="tel:+79250440404">
-									+7 925 044-04-04
-								</a>
-							</span>
-							<span>
-								<a href="tel:+79254400404">
-									+7 925 440-04-04 (заказ косметики)
-								</a>
-							</span>
-							<span>
-								<a href="tel:+74953803828">
-									+7 495-380-38-28
-								</a>
-							</span>
-						</div>
-						<div class="item">
-							<span>Понедельник – Воскресенье:</span>
-							<span>с 1000 до 2100</span>
-						</div>
-						<div class="item">
-							<span>
-								<a class="mail" href="mailto:hello@akaram.ru">hello@akaram.ru</a>
-							</span>
-						</div>
-						<div class="item__buttons">
-							<span>
-								<a href="#">
-									<img src="img/watsapp.png" alt="">
-								</a>
-							</span>
-							<span>
-								<a href="#">
-									<img src="img/telegram.png" alt="">
-								</a>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer class="footer">
-    <div class="line"></div>
-    <div class="footer__content paddings">
-        <div class="logo">
-            <img src="img/header-logo.png" alt="">
-        </div>
-        <div class="grid__block">
-            <div class="item toggler">
-                <h4>О клинике</h4>
-                <ul>
-                    <li><a href="price.html">Цены</a></li>
-                    <li><a href="doctors.html">Доктора</a></li>
-                    <li><a href="feedback.html">Отзывы</a></li>
-                    <li><a href="ertificate.html">Лицензии</a></li>
-                    <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
-                </ul>
             </div>
-            <div class="item toggler">
-                <h4>Услуги</h4>
+            <nav class="nav__desctop">
                 <ul>
-                    <li><a href="#">Цены</a></li>
-                    <li><a href="#">Доктора</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Лицензии</a></li>
+                    <li class="dropdown">
+                        <a href="#">О клинике</a>
+                        <ul>
+                            <li><a href="price.html">Цены</a></li>
+                            <li><a href="doctors.html">Доктора</a></li>
+                            <li><a href="feedback.html">Отзывы</a></li>
+                            <li><a href="certificate.html">Лицензии</a></li>
+                            <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Услуги</a>
+                        <ul>
+                            <li><a href="cosmetology.html">Косметология</a></li>
+                            <li><a href="#">Дерматологи</a></li>
+                            <li><a href="#">Эндокринология</a></li>
+                            <li><a href="#">Гинекология</a></li>
+                            <li><a href="#">Анализы крови</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Интернет-магазин</a>
+                        <ul>
+                            <li><a href="#">О косметике</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Обучение</a></li>
-                </ul>
-            </div>
-            <div class="item toggler">
-                <h4>Интернет-магазин</h4>
-                <ul>
-                    <li><a href="#">Цены</a></li>
-                    <li><a href="#">Доктора</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Лицензии</a></li>
-                    <li><a href="#">Обучение</a></li>
-                </ul>
-            </div>
-            <div class="item contacts">
-                <h4>Контакты</h4>
-                <ul>
-                    <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
-                    <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
-                    <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
-                    <li class="mail"><a href="mailto:hello@akaram.ru">hello@akaram.ru</a></li>
-                    <li class="image-links">
-                        <div class="flex" style="gap: 10px;">
-                            <span>
-								<a href="#">
-									<img src="img/watsapp.png" alt="">
-								</a>
-							</span>
-							<span>
-								<a href="#">
-									<img src="img/telegram.png" alt="">
-								</a>
-							</span>
-                        </div>
+                    <li><a href="#">Контакты</a></li>
+                    <li class="tel">
+                        <a href="#">+7 925 944-04-04</a>
+                        <span>Ежедневно с 10:00 до 21:00</span>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-text flex --just-space paddings">
-        <p class="text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis impedit ratione, repellat libero velit
-            labore molestiae laudantium itaque minima vero, magni numquam vel, eius ducimus illum maxime ipsam quo
-            dolore.
-        </p>
-        <a href="#">Пользовательское соглашение</a>
-        <a href="#">Публичная оферта</a>
-    </div>
-</footer>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="//code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            </nav>
+            <nav class="nav__mobile" id="nav__mobile">
+                <ul>
+                    <li class="tel">
+                        <div>
+                            <a href="#">+7 925 944-04-04</a>
+                            <span>Ежедневно с 10:00 до 21:00</span>
+                        </div>
+                        <div class="close-btn">
+                            <img src="img/close.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="dropdown toggler">
+                        <a href="#">
+                            <span>О клинике</span>
+                            <span><img src="img/dropdown.png" alt=""></span>
+                        </a>
+                        <ul>
+                            <li><a href="price.html">Цены</a></li>
+                            <li><a href="doctors.html">Доктора</a></li>
+                            <li><a href="feedback.html">Отзывы</a></li>
+                            <li><a href="certificate.html">Лицензии</a></li>
+                            <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown toggler">
+                        <a href="#">
+                            <span>Услуги</span>
+                            <span><img src="img/dropdown.png" alt=""></span>
+                        </a>
+                        <ul>
+                            <li><a href="cosmetology.html">Косметология</a></li>
+                            <li><a href="#">Дерматологи</a></li>
+                            <li><a href="#">Эндокринология</a></li>
+                            <li><a href="#">Гинекология</a></li>
+                            <li><a href="#">Анализы крови</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown toggler">
+                        <a href="#">
+                            <span>Интернет-магазин</span>
+                            <span><img src="img/dropdown.png" alt=""></span>
+                        </a>
+                        <ul>
+                            <li><a href="#">О косметике</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Обучение</a></li>
+                    <li><a href="#">Контакты</a></li>
 
-<script src="js/libs.min.js"></script>
-<script src="js/main.min.js"></script>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+
+            <div class="title__block">
+                <span class="subtitle"></span>
+                <h1></h1>
+            </div>
+
+
+
+            <div class="map__block">
+                <h2 class="paddings">Контакты</h2>
+                <div class="map-with-block">
+                    <div class="info__block__wrapper">
+                        <div class="info__block">
+                            <div class="item">
+                                <span>г. Москва, Крымский вал, дом 3, строение 2, офис 203</span>
+                                <span>м. «Октябрьская», кольцевая линия</span>
+                            </div>
+                            <div class="item">
+                                <span>
+                                    <a href="tel:+79250440404">
+                                        +7 925 044-04-04
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href="tel:+79254400404">
+                                        +7 925 440-04-04 (заказ косметики)
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href="tel:+74953803828">
+                                        +7 495-380-38-28
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="item">
+                                <span>Понедельник – Воскресенье:</span>
+                                <span>с 1000 до 2100</span>
+                            </div>
+                            <div class="item">
+                                <span>
+                                    <a class="mail" href="mailto:hello@akaram.ru">hello@akaram.ru</a>
+                                </span>
+                            </div>
+                            <div class="item__buttons">
+                                <span>
+                                    <a href="#">
+                                        <img src="img/watsapp.png" alt="">
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href="#">
+                                        <img src="img/telegram.png" alt="">
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="line"></div>
+            <div class="footer__content paddings">
+                <div class="logo">
+                    <img src="img/header-logo.png" alt="">
+                </div>
+                <div class="grid__block">
+                    <div class="item toggler">
+                        <h4>О клинике</h4>
+                        <ul>
+                            <li><a href="price.html">Цены</a></li>
+                            <li><a href="doctors.html">Доктора</a></li>
+                            <li><a href="feedback.html">Отзывы</a></li>
+                            <li><a href="ertificate.html">Лицензии</a></li>
+                            <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
+                        </ul>
+                    </div>
+                    <div class="item toggler">
+                        <h4>Услуги</h4>
+                        <ul>
+                            <li><a href="#">Цены</a></li>
+                            <li><a href="#">Доктора</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Лицензии</a></li>
+                            <li><a href="#">Обучение</a></li>
+                        </ul>
+                    </div>
+                    <div class="item toggler">
+                        <h4>Интернет-магазин</h4>
+                        <ul>
+                            <li><a href="#">Цены</a></li>
+                            <li><a href="#">Доктора</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Лицензии</a></li>
+                            <li><a href="#">Обучение</a></li>
+                        </ul>
+                    </div>
+                    <div class="item contacts">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                            <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                            <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                            <li class="mail"><a href="mailto:hello@akaram.ru">hello@akaram.ru</a></li>
+                            <li class="image-links">
+                                <div class="flex" style="gap: 10px;">
+                                    <span>
+                                        <a href="#">
+                                            <img src="img/watsapp.png" alt="">
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a href="#">
+                                            <img src="img/telegram.png" alt="">
+                                        </a>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text flex --just-space paddings">
+                <p class="text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis impedit ratione, repellat libero
+                    velit
+                    labore molestiae laudantium itaque minima vero, magni numquam vel, eius ducimus illum maxime ipsam
+                    quo
+                    dolore.
+                </p>
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Публичная оферта</a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
 
 </body>
 
