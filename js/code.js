@@ -87,6 +87,7 @@ function getScreenWidth() {
       $('.tab-item').removeClass("active");
       var SelectOption = $(".select").val();
       $(".tab-item[data-tab=" + SelectOption + "]").addClass("active");
+      
     });
   }
 }
