@@ -77,6 +77,17 @@ var swiper0 = new Swiper(".mainSlider", {
   swiper7 = new Swiper(".bigSlider", {
     spaceBetween: 10,
     thumbs: { swiper: swiper6 },
+  }),
+  swiper8 = new Swiper(".tabsInfo", {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    navigation: { nextEl: ".tabs-next", prevEl: ".tabs-prev" },
+    breakpoints: {
+      320: { slidesPerView: 3, spaceBetween: 10 },
+      500: { slidesPerView: 3, spaceBetween: 10 },
+      901: { slidesPerView: 3, spaceBetween: 10 },
+      1024: { slidesPerView: 4, spaceBetween: 10 },
+    },
   });
 
 // Увеличивание количества товаров в корзине

@@ -1698,6 +1698,16 @@ ul {
   flex-direction: column;
   gap: 20px;
 }
+.about_doctor__block-info .tabs-wrapper .tab-item h4{
+  margin-bottom: 10px;
+}
+.about_doctor__block-info .tabs-wrapper .tab-item .slider{
+  width: calc(100% - 40px - 84px);
+  overflow: hidden;
+}
+.about_doctor__block-info .tabs-wrapper .tab-item .swiper{
+  padding: 0 !important;
+}
 .about_doctor__block-info .tabs-wrapper .tab-item .flex .item:nth-child(1) {
   -ms-flex-preferred-size: 40%;
   flex-basis: 40%;
