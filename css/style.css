@@ -249,13 +249,13 @@ p {
 }
 .slider-buttons .swiper-button-next:after,
 .slider-buttons .swiper-rtl .swiper-button-prev:after {
-  content: url(../../img/Button.png) !important;
+  content: url(../img/Button.png) !important;
   width: 100%;
   height: 100%;
 }
 .slider-buttons .swiper-button-prev:after,
 .slider-buttons .swiper-rtl .swiper-button-next:after {
-  content: url(../../img/Button.png) !important;
+  content: url(../img/Button.png) !important;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -2559,13 +2559,18 @@ ul {
 .catalogItem-preview .left-sidebar .button {
   width: 100%;
 }
+
 .catalogItem-preview .left-sidebar .button a {
+  transition: color .3s ease-in-out;
   display: block;
   color: #191000;
   text-align: center;
   width: 100%;
   padding: 18px 0;
   border: 2px solid #f04d58;
+}
+.catalogItem-preview .left-sidebar .button:hover a{
+  color: #f04d58;
 }
 .catalogItem-preview .left-sidebar .buttons__store {
   display: -webkit-box;
@@ -4217,13 +4222,13 @@ p {
 }
 .slider-buttons .swiper-button-next:after,
 .slider-buttons .swiper-rtl .swiper-button-prev:after {
-  content: url(../../img/Button.png) !important;
+  content: url(../img/Button.png) !important;
   width: 100%;
   height: 100%;
 }
 .slider-buttons .swiper-button-prev:after,
 .slider-buttons .swiper-rtl .swiper-button-next:after {
-  content: url(../../img/Button.png) !important;
+  content: url(../img/Button.png) !important;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
