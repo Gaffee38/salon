@@ -14,6 +14,40 @@ $(".logo__wrapper").on("click", ".burger", function () {
     $(this).next("ul").toggle(200), $(this).toggleClass("open");
   });
 
+const screenWidth = window.screen.width;
+const mobile = document.querySelector(".mobile");
+const desctop = document.querySelector(".desctop");
+
+function getScreenWidth() {
+  if (screenWidth > 768) {
+    desctop.classList.add("visible");
+    $(".tabs-wrapper").each(function () {
+      let e = $(this);
+      e.find(".tab-item").not(":first").hide(),
+        e
+          .find(".tab")
+          .click(function () {
+            e
+              .find(".tab")
+              .removeClass("active")
+              .eq($(this).index())
+              .addClass("active"),
+              e.find(".tab-item").hide().eq($(this).index()).fadeIn(50);
+          })
+          .eq(0)
+          .addClass("active");
+    });
+  } else {
+    mobile.classList.add("visible");
+    $(".select").change(function () {
+      $(".tab-item").removeClass("active");
+      var SelectOption = $(".select").val();
+      $(".tab-item[data-tab=" + SelectOption + "]").addClass("active");
+    });
+  }
+}
+getScreenWidth();
+
 // Слайдеры
 var swiper0 = new Swiper(".mainSlider", {
     slidesPerView: 1,
@@ -116,15 +150,6 @@ $(".error__alert").click(function () {
 });
 
 // Модальное окно "записаться"
-// $(".record").on("click", function () {
-//   $(".popup").fadeIn(500);
-//   $("body").addClass("fix");
-// });
-// $(".close").on("click", function () {
-//   $(".popup").fadeOut(500);
-//   $("body").removeClass("fix");
-// });
-
 const bodyNode = document.body || document.getElementsByTagName("body")[0];
 
 document.querySelector(".record").addEventListener("click", function () {
@@ -145,36 +170,3 @@ document.getElementById("overlay").addEventListener("click", function () {
 });
 
 // Код для блока с сайдбаром (цены, каталог)
-const screenWidth = window.screen.width;
-const mobile = document.querySelector(".mobile");
-const desctop = document.querySelector(".desctop");
-
-function getScreenWidth() {
-  if (screenWidth > 768) {
-    desctop.classList.add("visible");
-    $(".tabs-wrapper").each(function () {
-      let e = $(this);
-      e.find(".tab-item").not(":first").hide(),
-        e
-          .find(".tab")
-          .click(function () {
-            e
-              .find(".tab")
-              .removeClass("active")
-              .eq($(this).index())
-              .addClass("active"),
-              e.find(".tab-item").hide().eq($(this).index()).fadeIn(50);
-          })
-          .eq(0)
-          .addClass("active");
-    });
-  } else {
-    mobile.classList.add("visible");
-    $(".select").change(function () {
-      $(".tab-item").removeClass("active");
-      var SelectOption = $(".select").val();
-      $(".tab-item[data-tab=" + SelectOption + "]").addClass("active");
-    });
-  }
-}
-getScreenWidth();
