@@ -82,13 +82,17 @@
             </li>
             <li><a href="#">Обучение</a></li>
             <li><a href="#">Контакты</a></li>
-            <li class="flex">
+            <li class="flex shop-btns">
               <a href="#">
                 <img src="img/cart-img.png" alt="" />
               </a>
-              <a href="#">
-                <img src="img/search-img.png" alt="" />
-              </a>
+              <div class="search">
+                <form>
+                  <label for="search">Search</label>
+                  <input id="search" type="search" pattern=".*\S.*" required />
+                  <span class="caret"></span>
+                </form>
+              </div>
             </li>
           </ul>
         </nav>

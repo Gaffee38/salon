@@ -19,45 +19,44 @@
     />
 
     <link rel="stylesheet" href="css/libs.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Главная</title>
   </head>
 
   <body>
-    <section class="popup">
-      <div class="popup__content">
-        <div class="close">
-          <span></span>
-          <span></span>
-        </div>
-        <div class="form__block text-with-image-block revers">
-          <div class="content">
-            <h2>ЗАПИСАТЬСЯ ОНЛАЙН</h2>
-            <p class="fz20">
-              Запишитесь на прием в нашу клинику и мы сразу свяжемся с вами
-            </p>
-            <form>
-              <input type="text" placeholder="Ваше имя" />
-              <input type="tel" placeholder="Телефон" />
-              <input type="email" placeholder="E-mail" />
-              <select>
-                <option value="0">Выбор врача</option>
-                <option value="1">Врач 1</option>
-                <option value="2">Врач 2</option>
-                <option value="3">Врач 3</option>
-              </select>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup__content" id="modal">
+      <div class="close">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="form__block text-with-image-block revers">
+        <div class="content">
+          <h2>ЗАПИСАТЬСЯ ОНЛАЙН</h2>
+          <p class="fz20">
+            Запишитесь на прием в нашу клинику и мы сразу свяжемся с вами
+          </p>
+          <form>
+            <input type="text" placeholder="Ваше имя" />
+            <input type="tel" placeholder="Телефон" />
+            <input type="email" placeholder="E-mail" />
+            <select>
+              <option value="0">Выбор врача</option>
+              <option value="1">Врач 1</option>
+              <option value="2">Врач 2</option>
+              <option value="3">Врач 3</option>
+            </select>
 
-              <div class="button-red-border">
-                <a href="#">{отправить}</a>
-              </div>
-            </form>
-          </div>
-          <div class="image">
-            <img src="img/3.png" alt="" />
-          </div>
+            <div class="button-red-border">
+              <a href="#">{отправить}</a>
+            </div>
+          </form>
+        </div>
+        <div class="image">
+          <img src="img/3.png" alt="" />
         </div>
       </div>
-    </section>
+    </div>
     <div class="body-wrapper">
       <header class="header">
         <div class="logo__wrapper">

@@ -116,13 +116,32 @@ $(".error__alert").click(function () {
 });
 
 // Модальное окно "записаться"
-$(".record").on("click", function () {
-  $(".popup").fadeIn(500);
-  $("body").addClass("fix");
+// $(".record").on("click", function () {
+//   $(".popup").fadeIn(500);
+//   $("body").addClass("fix");
+// });
+// $(".close").on("click", function () {
+//   $(".popup").fadeOut(500);
+//   $("body").removeClass("fix");
+// });
+
+const bodyNode = document.body || document.getElementsByTagName("body")[0];
+
+document.querySelector(".record").addEventListener("click", function () {
+  document.getElementById("overlay").classList.add("is-visible");
+  document.getElementById("modal").classList.add("is-visible");
+  bodyNode.classList.add("fix");
 });
-$(".close").on("click", function () {
-  $(".popup").fadeOut(500);
-  $("body").removeClass("fix");
+
+document.querySelector(".close").addEventListener("click", function () {
+  document.getElementById("overlay").classList.remove("is-visible");
+  document.getElementById("modal").classList.remove("is-visible");
+  bodyNode.classList.remove("fix");
+});
+document.getElementById("overlay").addEventListener("click", function () {
+  document.getElementById("overlay").classList.remove("is-visible");
+  document.getElementById("modal").classList.remove("is-visible");
+  bodyNode.classList.remove("fix");
 });
 
 // Код для блока с сайдбаром (цены, каталог)
