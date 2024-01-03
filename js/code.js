@@ -1,23 +1,29 @@
-// Галлерея
-Fancybox.bind('[data-fancybox="gallery"]', {});
+// Модальное окно "записаться"
+const bodyNode = document.body || document.getElementsByTagName("body")[0];
+const record = document.querySelector(".record");
 
-// Burger-menu
-$(".logo__wrapper").on("click", ".burger", function () {
-  $(".nav__mobile").show("slide", { direction: "right" }),
-    $("body").css("overflow", "hidden");
-}),
-  $(".close-btn").click(function () {
-    $(".nav__mobile").hide("slide", { direction: "right" }),
-      $("body").css("overflow", "auto");
-  }),
-  $(".toggler").click(function () {
-    $(this).next("ul").toggle(200), $(this).toggleClass("open");
+if (record != null) {
+  record.addEventListener("click", function () {
+    document.getElementById("overlay").classList.add("is-visible");
+    document.getElementById("modal").classList.add("is-visible");
+    bodyNode.classList.add("fix");
   });
+
+  document.querySelector(".close").addEventListener("click", function () {
+    document.getElementById("overlay").classList.remove("is-visible");
+    document.getElementById("modal").classList.remove("is-visible");
+    bodyNode.classList.remove("fix");
+  });
+  document.getElementById("overlay").addEventListener("click", function () {
+    document.getElementById("overlay").classList.remove("is-visible");
+    document.getElementById("modal").classList.remove("is-visible");
+    bodyNode.classList.remove("fix");
+  });
+}
 
 const screenWidth = window.screen.width;
 const mobile = document.querySelector(".mobile");
 const desctop = document.querySelector(".desctop");
-
 function getScreenWidth() {
   if (screenWidth > 768) {
     desctop.classList.add("visible");
@@ -47,6 +53,21 @@ function getScreenWidth() {
   }
 }
 getScreenWidth();
+// Галлерея
+Fancybox.bind('[data-fancybox="gallery"]', {});
+
+// Burger-menu
+$(".logo__wrapper").on("click", ".burger", function () {
+  $(".nav__mobile").show("slide", { direction: "right" }),
+    $("body").css("overflow", "hidden");
+}),
+  $(".close-btn").click(function () {
+    $(".nav__mobile").hide("slide", { direction: "right" }),
+      $("body").css("overflow", "auto");
+  }),
+  $(".toggler").click(function () {
+    $(this).next("ul").toggle(200), $(this).toggleClass("open");
+  });
 
 // Слайдеры
 var swiper0 = new Swiper(".mainSlider", {
@@ -149,24 +170,20 @@ $(".error__alert").click(function () {
   $(this).next(".close").toggle(200), $(this).toggleClass("hide");
 });
 
-// Модальное окно "записаться"
-const bodyNode = document.body || document.getElementsByTagName("body")[0];
-
-document.querySelector(".record").addEventListener("click", function () {
-  document.getElementById("overlay").classList.add("is-visible");
-  document.getElementById("modal").classList.add("is-visible");
-  bodyNode.classList.add("fix");
+// Табы
+$(".tabs-wrapper").each(function () {
+  let e = $(this);
+  e.find(".tab-item").not(":first").hide(),
+    e
+      .find(".tab")
+      .click(function () {
+        e
+          .find(".tab")
+          .removeClass("active")
+          .eq($(this).index())
+          .addClass("active"),
+          e.find(".tab-item").hide().eq($(this).index()).fadeIn(50);
+      })
+      .eq(0)
+      .addClass("active");
 });
-
-document.querySelector(".close").addEventListener("click", function () {
-  document.getElementById("overlay").classList.remove("is-visible");
-  document.getElementById("modal").classList.remove("is-visible");
-  bodyNode.classList.remove("fix");
-});
-document.getElementById("overlay").addEventListener("click", function () {
-  document.getElementById("overlay").classList.remove("is-visible");
-  document.getElementById("modal").classList.remove("is-visible");
-  bodyNode.classList.remove("fix");
-});
-
-// Код для блока с сайдбаром (цены, каталог)

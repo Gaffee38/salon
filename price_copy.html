@@ -1,672 +1,756 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="@@description">
-    <meta name="keywords" content="@@keywords">
-    <link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="@@favicon.webp" type="image/webp">
-    <link rel="shortcut icon" href="@@favicon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="@@description" />
+    <meta name="keywords" content="@@keywords" />
+    <link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="@@favicon.webp" type="image/webp" />
+    <link rel="shortcut icon" href="@@favicon.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Шаблон</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="body-wrapper">
-        <header class="header">
-            <div class="logo__wrapper">
-                <div class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="logo">
-                    <div class="image">
-                        <a href="index.html">
-                            <img src="img/header-logo.png" alt="">
-                        </a>
-                    </div>
-                </div>
+      <header class="header">
+        <div class="logo__wrapper">
+          <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="logo">
+            <div class="image">
+              <a href="index.html">
+                <img src="img/header-logo.png" alt="" />
+              </a>
             </div>
-            <nav class="nav__desctop">
+          </div>
+        </div>
+        <nav class="nav__desctop">
+          <ul>
+            <li class="dropdown">
+              <a href="#">О клинике</a>
+              <ul>
+                <li><a href="price.html">Цены</a></li>
+                <li><a href="doctors.html">Доктора</a></li>
+                <li><a href="feedback.html">Отзывы</a></li>
+                <li><a href="certificate.html">Лицензии</a></li>
+                <li>
+                  <a href="education.html">Обучающий центр Анны Карамовой</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Услуги</a>
+              <ul>
+                <li><a href="cosmetology.html">Косметология</a></li>
+                <li><a href="#">Дерматологи</a></li>
+                <li><a href="#">Эндокринология</a></li>
+                <li><a href="#">Гинекология</a></li>
+                <li><a href="#">Анализы крови</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Интернет-магазин</a>
+              <ul>
+                <li><a href="#">О косметике</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Обучение</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li class="tel">
+              <a href="#">+7 925 944-04-04</a>
+              <span>Ежедневно с 10:00 до 21:00</span>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav__mobile" id="nav__mobile">
+          <ul>
+            <li class="tel">
+              <div>
+                <a href="#">+7 925 944-04-04</a>
+                <span>Ежедневно с 10:00 до 21:00</span>
+              </div>
+              <div class="close-btn">
+                <img src="img/close.svg" alt="" />
+              </div>
+            </li>
+            <li class="dropdown toggler">
+              <a href="#">
+                <span>О клинике</span>
+                <span><img src="img/dropdown.png" alt="" /></span>
+              </a>
+              <ul>
+                <li><a href="price.html">Цены</a></li>
+                <li><a href="doctors.html">Доктора</a></li>
+                <li><a href="feedback.html">Отзывы</a></li>
+                <li><a href="certificate.html">Лицензии</a></li>
+                <li>
+                  <a href="education.html">Обучающий центр Анны Карамовой</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown toggler">
+              <a href="#">
+                <span>Услуги</span>
+                <span><img src="img/dropdown.png" alt="" /></span>
+              </a>
+              <ul>
+                <li><a href="cosmetology.html">Косметология</a></li>
+                <li><a href="#">Дерматологи</a></li>
+                <li><a href="#">Эндокринология</a></li>
+                <li><a href="#">Гинекология</a></li>
+                <li><a href="#">Анализы крови</a></li>
+              </ul>
+            </li>
+            <li class="dropdown toggler">
+              <a href="#">
+                <span>Интернет-магазин</span>
+                <span><img src="img/dropdown.png" alt="" /></span>
+              </a>
+              <ul>
+                <li><a href="#">О косметике</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Обучение</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="title__block">
+          <span class="subtitle">О клинике</span>
+          <h1>Цены</h1>
+        </div>
+        <div class="desctop">
+          <div class="price__block">
+            <div class="tabs-wrapper">
+              <div class="sidebar tabs">
                 <ul>
-                    <li class="dropdown">
-                        <a href="#">О клинике</a>
-                        <ul>
-                            <li><a href="price.html">Цены</a></li>
-                            <li><a href="doctors.html">Доктора</a></li>
-                            <li><a href="feedback.html">Отзывы</a></li>
-                            <li><a href="certificate.html">Лицензии</a></li>
-                            <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Услуги</a>
-                        <ul>
-                            <li><a href="cosmetology.html">Косметология</a></li>
-                            <li><a href="#">Дерматологи</a></li>
-                            <li><a href="#">Эндокринология</a></li>
-                            <li><a href="#">Гинекология</a></li>
-                            <li><a href="#">Анализы крови</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Интернет-магазин</a>
-                        <ul>
-                            <li><a href="#">О косметике</a></li>
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">Доставка и оплата</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Обучение</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li class="tel">
-                        <a href="#">+7 925 944-04-04</a>
-                        <span>Ежедневно с 10:00 до 21:00</span>
-                    </li>
+                  <li class="active tab">Консультация специалиста</li>
+                  <li class="tab">Уходы</li>
+                  <li class="tab">
+                    Атравматичная чистка на аппарате HydraFacial
+                  </li>
+                  <li class="tab">
+                    Профессиональный уход ZO Skin Health Professional Treatment
+                  </li>
+                  <li class="tab">Мануальная чистка лица</li>
+                  <li class="tab">Химические пилинги</li>
+                  <li class="tab">
+                    Лазерная эпиляция и лечение пигментации на аппарате Candela
+                    GentleLase Pro-U
+                  </li>
+                  <li class="tab">
+                    Фотодинамическая терапия на аппарате REVIXAN DuoLight MIDI+
+                  </li>
+                  <li class="tab">Лечение на аппарате «M22»</li>
+                  <li class="tab">Фотоэпиляция на аппарате «M22»</li>
+                  <li class="tab">Анестезия</li>
+                  <li class="tab">Ботулинотерапия</li>
+                  <li class="tab">Биоревитализация</li>
                 </ul>
-            </nav>
-            <nav class="nav__mobile" id="nav__mobile">
-                <ul>
-                    <li class="tel">
-                        <div>
-                            <a href="#">+7 925 944-04-04</a>
-                            <span>Ежедневно с 10:00 до 21:00</span>
-                        </div>
-                        <div class="close-btn">
-                            <img src="img/close.svg" alt="">
-                        </div>
-                    </li>
-                    <li class="dropdown toggler">
-                        <a href="#">
-                            <span>О клинике</span>
-                            <span><img src="img/dropdown.png" alt=""></span>
-                        </a>
-                        <ul>
-                            <li><a href="price.html">Цены</a></li>
-                            <li><a href="doctors.html">Доктора</a></li>
-                            <li><a href="feedback.html">Отзывы</a></li>
-                            <li><a href="certificate.html">Лицензии</a></li>
-                            <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown toggler">
-                        <a href="#">
-                            <span>Услуги</span>
-                            <span><img src="img/dropdown.png" alt=""></span>
-                        </a>
-                        <ul>
-                            <li><a href="cosmetology.html">Косметология</a></li>
-                            <li><a href="#">Дерматологи</a></li>
-                            <li><a href="#">Эндокринология</a></li>
-                            <li><a href="#">Гинекология</a></li>
-                            <li><a href="#">Анализы крови</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown toggler">
-                        <a href="#">
-                            <span>Интернет-магазин</span>
-                            <span><img src="img/dropdown.png" alt=""></span>
-                        </a>
-                        <ul>
-                            <li><a href="#">О косметике</a></li>
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">Доставка и оплата</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Обучение</a></li>
-                    <li><a href="#">Контакты</a></li>
-
-                </ul>
-            </nav>
-        </header>
-        <main class="main">
-
-            <div class="title__block">
-                <span class="subtitle">О клинике</span>
-                <h1>Цены</h1>
-            </div>
-            <div class="desctop">
-                <div class="price__block">
-                    <div class="tabs-wrapper">
-                        <div class="sidebar tabs">
-                            <ul>
-                                <li class="active tab">
-                                    Консультация специалиста
-                                </li>
-                                <li class="tab">
-                                    Уходы
-                                </li>
-                                <li class="tab">
-                                    Атравматичная чистка на аппарате HydraFacial
-                                </li>
-                                <li class="tab">
-                                    Профессиональный уход ZO Skin Health Professional Treatment
-                                </li>
-                                <li class="tab">
-                                    Мануальная чистка лица
-                                </li>
-                                <li class="tab">
-                                    Химические пилинги
-                                </li>
-                                <li class="tab">
-                                    Лазерная эпиляция и лечение пигментации на аппарате Candela GentleLase Pro-U
-                                </li>
-                                <li class="tab">
-                                    Фотодинамическая терапия на аппарате REVIXAN DuoLight MIDI+
-                                </li>
-                                <li class="tab">
-                                    Лечение на аппарате «M22»
-                                </li>
-                                <li class="tab">
-                                    Фотоэпиляция на аппарате «M22»
-                                </li>
-                                <li class="tab">
-                                    Анестезия
-                                </li>
-                                <li class="tab">
-                                    Ботулинотерапия
-                                </li>
-                                <li class="tab">
-                                    Биоревитализация
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tabs-content">
-                            <div class="tab-item">
-                                <div class="price__block-info">
-                                    <div class="search">
-                                        <input type="text" placeholder="Найти">
-                                        <div class="img">
-                                            <img src="img/search.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="price_list">
-                                        <div class="price_list-item">
-                                            <h3>Консультация специалиста</h3>
-                                            <ul>
-                                                <li class="title">
-                                                    <span class="text">Консультации</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А.
-                                                        Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А.
-                                                        Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А.
-                                                        Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А.
-                                                        Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item">
-                                <div class="price__block-info">
-                                    <div class="search">
-                                        <input type="text" placeholder="Найти">
-                                        <div class="img">
-                                            <img src="img/search.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="price_list">
-                                        <div class="price_list-item">
-                                            <h3>Уходы</h3>
-                                            <ul>
-                                                <li>
-                                                    <span class="text">Эстетический массаж лица</span>
-                                                    <span class="price">7 800 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Эстетический массаж лица</span>
-                                                    <span class="price">7 800 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Эстетический массаж лица</span>
-                                                    <span class="price">7 800 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Эстетический массаж лица</span>
-                                                    <span class="price">7 800 ₽</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item">
-                                <div class="price__block-info">
-                                    <div class="search">
-                                        <input type="text" placeholder="Найти">
-                                        <div class="img">
-                                            <img src="img/search.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="price_list">
-                                        <div class="price_list-item">
-                                            <h3>Консультация специалиста</h3>
-                                            <ul>
-                                                <li class="title">
-                                                    <span class="text">Консультации</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                                <li>
-                                                    <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                    <span class="price">7 000 ₽</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-item">
+                  <div class="price__block-info">
+                    <div class="search">
+                      <input type="text" placeholder="Найти" />
+                      <div class="img">
+                        <img src="img/search.png" alt="" />
+                      </div>
                     </div>
+                    <div class="price_list">
+                      <div class="price_list-item">
+                        <h3>Консультация специалиста</h3>
+                        <ul>
+                          <li class="title">
+                            <span class="text">Консультации</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="mobile">
-                <div class="price__block">
-                    <div class="mobile__option">
-                        <select class="select">
-                            <option value="0" selected="selected">Консультация специалиста</option>
-                            <option value="1">Уходы</option>
-                            <option value="2">Атравматичная чистка на аппарате HydraFacial</option>
-                            <option value="3">Профессиональный уход ZO Skin Health Professional Treatment</option>
-                            <option value="4">Мануальная чистка лица</option>
-                            <option value="5">Химические пилинги</option>
-                        </select>
+                <div class="tab-item">
+                  <div class="price__block-info">
+                    <div class="search">
+                      <input type="text" placeholder="Найти" />
+                      <div class="img">
+                        <img src="img/search.png" alt="" />
+                      </div>
                     </div>
-                    <div class="tabs-content">
-                        <div class="tab-item active" data-tab="0">
-                            <div class="price__block-info">
-                                <div class="search">
-                                    <input type="text" placeholder="Найти">
-                                    <div class="img">
-                                        <img src="img/search.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="price_list">
-                                    <div class="price_list-item">
-                                        <h3>Консультация специалиста</h3>
-                                        <ul>
-                                            <li class="title">
-                                                <span class="text">Консультации</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А.
-                                                    Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А.
-                                                    Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А.
-                                                    Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А.
-                                                    Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-item" data-tab="1">
-                            <div class="price__block-info">
-                                <div class="search">
-                                    <input type="text" placeholder="Найти">
-                                    <div class="img">
-                                        <img src="img/search.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="price_list">
-                                    <div class="price_list-item">
-                                        <h3>Уходы</h3>
-                                        <ul>
-                                            <li>
-                                                <span class="text">Эстетический массаж лица</span>
-                                                <span class="price">7 800 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Эстетический массаж лица</span>
-                                                <span class="price">7 800 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Эстетический массаж лица</span>
-                                                <span class="price">7 800 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Эстетический массаж лица</span>
-                                                <span class="price">7 800 ₽</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-item" data-tab="2">
-                            <div class="price__block-info">
-                                <div class="search">
-                                    <input type="text" placeholder="Найти">
-                                    <div class="img">
-                                        <img src="img/search.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="price_list">
-                                    <div class="price_list-item">
-                                        <h3>Консультация специалиста</h3>
-                                        <ul>
-                                            <li class="title">
-                                                <span class="text">Консультации</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-item" data-tab="3">
-                            <div class="price__block-info">
-                                <div class="search">
-                                    <input type="text" placeholder="Найти">
-                                    <div class="img">
-                                        <img src="img/search.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="price_list">
-                                    <div class="price_list-item">
-                                        <h3>Консультация специалиста</h3>
-                                        <ul>
-                                            <li class="title">
-                                                <span class="text">Консультации</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-item" data-tab="4">
-                            <div class="price__block-info">
-                                <div class="search">
-                                    <input type="text" placeholder="Найти">
-                                    <div class="img">
-                                        <img src="img/search.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="price_list">
-                                    <div class="price_list-item">
-                                        <h3>Консультация специалиста</h3>
-                                        <ul>
-                                            <li class="title">
-                                                <span class="text">Консультации</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-item" data-tab="5">
-                            <div class="price__block-info">
-                                <div class="search">
-                                    <input type="text" placeholder="Найти">
-                                    <div class="img">
-                                        <img src="img/search.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="price_list">
-                                    <div class="price_list-item">
-                                        <h3>Консультация специалиста</h3>
-                                        <ul>
-                                            <li class="title">
-                                                <span class="text">Консультации</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                            <li>
-                                                <span class="text">Первичная консультация главного врача А.А. Карамовой</span>
-                                                <span class="price">7 000 ₽</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="price_list">
+                      <div class="price_list-item">
+                        <h3>Уходы</h3>
+                        <ul>
+                          <li>
+                            <span class="text">Эстетический массаж лица</span>
+                            <span class="price">7 800 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text">Эстетический массаж лица</span>
+                            <span class="price">7 800 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text">Эстетический массаж лица</span>
+                            <span class="price">7 800 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text">Эстетический массаж лица</span>
+                            <span class="price">7 800 ₽</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                
-            </div>
-
-
-
-
-            <div class="map__block">
-				<h2 class="paddings">Контакты</h2>
-				<div class="map-with-block">
-					<div class="map-inner">
-						<div style="position:relative;overflow:hidden;"><a
-								href="https://yandex.ru/maps/63/irkutsk/?utm_medium=mapframe&utm_source=maps"
-								style="color:#eee;font-size:12px;position:absolute;top:0px;">Иркутск</a><a
-								href="https://yandex.ru/maps/213/moscow/house/ulitsa_krymskiy_val_3s2/Z04YcAdpSEIEQFtvfXtzeH9iYg==/?ll=37.609173%2C55.729316&utm_medium=mapframe&utm_source=maps&z=16.86"
-								style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Крымский Вал, 3с2 —
-								Яндекс Карты</a><iframe
-								src="https://yandex.ru/map-widget/v1/?ll=37.609173%2C55.729316&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY5NDQxORJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JrRgNGL0LzRgdC60LjQuSDQktCw0LssIDPRgTIiCg3MbxZCFdHqXkI%2C&z=16.86"
-								width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-						</div>
-					</div>
-					<div class="info__block__wrapper">
-						<div class="info__block">
-							<div class="item">
-								<span>г. Москва, Крымский вал, дом 3, строение 2, офис 203</span>
-								<span>м. «Октябрьская», кольцевая линия</span>
-							</div>
-							<div class="item">
-								<span>
-									<a href="tel:+79250440404">
-										+7 925 044-04-04
-									</a>
-								</span>
-								<span>
-									<a href="tel:+79254400404">
-										+7 925 440-04-04 (заказ косметики)
-									</a>
-								</span>
-								<span>
-									<a href="tel:+74953803828">
-										+7 495-380-38-28
-									</a>
-								</span>
-							</div>
-							<div class="item">
-								<span>Понедельник – Воскресенье:</span>
-								<span>с 1000 до 2100</span>
-							</div>
-							<div class="item">
-								<span>
-									<a class="mail" href="mailto:hello@akaram.ru">hello@akaram.ru</a>
-								</span>
-							</div>
-							<div class="item__buttons">
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-        </main>
-        <footer class="footer">
-            <div class="line"></div>
-            <div class="footer__content paddings">
-                <div class="logo">
-                    <img src="img/header-logo.png" alt="">
+                <div class="tab-item">
+                  <div class="price__block-info">
+                    <div class="search">
+                      <input type="text" placeholder="Найти" />
+                      <div class="img">
+                        <img src="img/search.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="price_list">
+                      <div class="price_list-item">
+                        <h3>Консультация специалиста</h3>
+                        <ul>
+                          <li class="title">
+                            <span class="text">Консультации</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                          <li>
+                            <span class="text"
+                              >Первичная консультация главного врача А.А.
+                              Карамовой</span
+                            >
+                            <span class="price">7 000 ₽</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="grid__block">
-                    <div class="item toggler">
-                        <h4>О клинике</h4>
-                        <ul>
-                            <li><a href="price.html">Цены</a></li>
-                            <li><a href="doctors.html">Доктора</a></li>
-                            <li><a href="feedback.html">Отзывы</a></li>
-                            <li><a href="ertificate.html">Лицензии</a></li>
-                            <li><a href="education.html">Обучающий центр Анны Карамовой</a></li>
-                        </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile">
+          <div class="price__block">
+            <div class="mobile__option">
+              <select class="select">
+                <option value="0" selected="selected">
+                  Консультация специалиста
+                </option>
+                <option value="1">Уходы</option>
+                <option value="2">
+                  Атравматичная чистка на аппарате HydraFacial
+                </option>
+                <option value="3">
+                  Профессиональный уход ZO Skin Health Professional Treatment
+                </option>
+                <option value="4">Мануальная чистка лица</option>
+                <option value="5">Химические пилинги</option>
+              </select>
+            </div>
+            <div class="tabs-content">
+              <div class="tab-item active" data-tab="0">
+                <div class="price__block-info">
+                  <div class="search">
+                    <input type="text" placeholder="Найти" />
+                    <div class="img">
+                      <img src="img/search.png" alt="" />
                     </div>
-                    <div class="item toggler">
-                        <h4>Услуги</h4>
-                        <ul>
-                            <li><a href="#">Цены</a></li>
-                            <li><a href="#">Доктора</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Лицензии</a></li>
-                            <li><a href="#">Обучение</a></li>
-                        </ul>
+                  </div>
+                  <div class="price_list">
+                    <div class="price_list-item">
+                      <h3>Консультация специалиста</h3>
+                      <ul>
+                        <li class="title">
+                          <span class="text">Консультации</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="item toggler">
-                        <h4>Интернет-магазин</h4>
-                        <ul>
-                            <li><a href="#">Цены</a></li>
-                            <li><a href="#">Доктора</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Лицензии</a></li>
-                            <li><a href="#">Обучение</a></li>
-                        </ul>
-                    </div>
-                    <div class="item contacts">
-                        <h4>Контакты</h4>
-                        <ul>
-                            <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
-                            <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
-                            <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
-                            <li class="mail"><a href="mailto:hello@akaram.ru">hello@akaram.ru</a></li>
-                            <li class="image-links">
-                                <div class="flex" style="gap: 10px;">
-                                    <span>
-                                        <a href="#">
-                                            <img src="img/watsapp.png" alt="">
-                                        </a>
-                                    </span>
-                                    <span>
-                                        <a href="#">
-                                            <img src="img/telegram.png" alt="">
-                                        </a>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="tab-item" data-tab="1">
+                <div class="price__block-info">
+                  <div class="search">
+                    <input type="text" placeholder="Найти" />
+                    <div class="img">
+                      <img src="img/search.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="price_list">
+                    <div class="price_list-item">
+                      <h3>Уходы</h3>
+                      <ul>
+                        <li>
+                          <span class="text">Эстетический массаж лица</span>
+                          <span class="price">7 800 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text">Эстетический массаж лица</span>
+                          <span class="price">7 800 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text">Эстетический массаж лица</span>
+                          <span class="price">7 800 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text">Эстетический массаж лица</span>
+                          <span class="price">7 800 ₽</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-item" data-tab="2">
+                <div class="price__block-info">
+                  <div class="search">
+                    <input type="text" placeholder="Найти" />
+                    <div class="img">
+                      <img src="img/search.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="price_list">
+                    <div class="price_list-item">
+                      <h3>Консультация специалиста</h3>
+                      <ul>
+                        <li class="title">
+                          <span class="text">Консультации</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-item" data-tab="3">
+                <div class="price__block-info">
+                  <div class="search">
+                    <input type="text" placeholder="Найти" />
+                    <div class="img">
+                      <img src="img/search.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="price_list">
+                    <div class="price_list-item">
+                      <h3>Консультация специалиста</h3>
+                      <ul>
+                        <li class="title">
+                          <span class="text">Консультации</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-item" data-tab="4">
+                <div class="price__block-info">
+                  <div class="search">
+                    <input type="text" placeholder="Найти" />
+                    <div class="img">
+                      <img src="img/search.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="price_list">
+                    <div class="price_list-item">
+                      <h3>Консультация специалиста</h3>
+                      <ul>
+                        <li class="title">
+                          <span class="text">Консультации</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-item" data-tab="5">
+                <div class="price__block-info">
+                  <div class="search">
+                    <input type="text" placeholder="Найти" />
+                    <div class="img">
+                      <img src="img/search.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="price_list">
+                    <div class="price_list-item">
+                      <h3>Консультация специалиста</h3>
+                      <ul>
+                        <li class="title">
+                          <span class="text">Консультации</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                        <li>
+                          <span class="text"
+                            >Первичная консультация главного врача А.А.
+                            Карамовой</span
+                          >
+                          <span class="price">7 000 ₽</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="footer-text flex --just-space paddings">
-                <p class="text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis impedit ratione, repellat libero
-                    velit
-                    labore molestiae laudantium itaque minima vero, magni numquam vel, eius ducimus illum maxime ipsam
-                    quo
-                    dolore.
-                </p>
-                <a href="#">Пользовательское соглашение</a>
-                <a href="#">Публичная оферта</a>
+          </div>
+        </div>
+
+        <div class="map__block">
+          <h2 class="paddings">Контакты</h2>
+          <div class="map-with-block">
+            <div class="map-inner">
+              <div style="position: relative; overflow: hidden">
+                <a
+                  href="https://yandex.ru/maps/63/irkutsk/?utm_medium=mapframe&utm_source=maps"
+                  style="
+                    color: #eee;
+                    font-size: 12px;
+                    position: absolute;
+                    top: 0px;
+                  "
+                  >Иркутск</a
+                ><a
+                  href="https://yandex.ru/maps/213/moscow/house/ulitsa_krymskiy_val_3s2/Z04YcAdpSEIEQFtvfXtzeH9iYg==/?ll=37.609173%2C55.729316&utm_medium=mapframe&utm_source=maps&z=16.86"
+                  style="
+                    color: #eee;
+                    font-size: 12px;
+                    position: absolute;
+                    top: 14px;
+                  "
+                  >Улица Крымский Вал, 3с2 — Яндекс Карты</a
+                ><iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=37.609173%2C55.729316&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY5NDQxORJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JrRgNGL0LzRgdC60LjQuSDQktCw0LssIDPRgTIiCg3MbxZCFdHqXkI%2C&z=16.86"
+                  width="100%"
+                  height="100%"
+                  frameborder="1"
+                  allowfullscreen="true"
+                  style="position: relative"
+                ></iframe>
+              </div>
             </div>
-        </footer>
+            <div class="info__block__wrapper">
+              <div class="info__block">
+                <div class="item">
+                  <span
+                    >г. Москва, Крымский вал, дом 3, строение 2, офис 203</span
+                  >
+                  <span>м. «Октябрьская», кольцевая линия</span>
+                </div>
+                <div class="item">
+                  <span>
+                    <a href="tel:+79250440404"> +7 925 044-04-04 </a>
+                  </span>
+                  <span>
+                    <a href="tel:+79254400404">
+                      +7 925 440-04-04 (заказ косметики)
+                    </a>
+                  </span>
+                  <span>
+                    <a href="tel:+74953803828"> +7 495-380-38-28 </a>
+                  </span>
+                </div>
+                <div class="item">
+                  <span>Понедельник – Воскресенье:</span>
+                  <span>с 1000 до 2100</span>
+                </div>
+                <div class="item">
+                  <span>
+                    <a class="mail" href="mailto:hello@akaram.ru"
+                      >hello@akaram.ru</a
+                    >
+                  </span>
+                </div>
+                <div class="item__buttons"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="line"></div>
+        <div class="footer__content paddings">
+          <div class="logo">
+            <img src="img/header-logo.png" alt="" />
+          </div>
+          <div class="grid__block">
+            <div class="item toggler">
+              <h4>О клинике</h4>
+              <ul>
+                <li><a href="price.html">Цены</a></li>
+                <li><a href="doctors.html">Доктора</a></li>
+                <li><a href="feedback.html">Отзывы</a></li>
+                <li><a href="ertificate.html">Лицензии</a></li>
+                <li>
+                  <a href="education.html">Обучающий центр Анны Карамовой</a>
+                </li>
+              </ul>
+            </div>
+            <div class="item toggler">
+              <h4>Услуги</h4>
+              <ul>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Доктора</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Лицензии</a></li>
+                <li><a href="#">Обучение</a></li>
+              </ul>
+            </div>
+            <div class="item toggler">
+              <h4>Интернет-магазин</h4>
+              <ul>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Доктора</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Лицензии</a></li>
+                <li><a href="#">Обучение</a></li>
+              </ul>
+            </div>
+            <div class="item contacts">
+              <h4>Контакты</h4>
+              <ul>
+                <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                <li><a href="tel:+79250440404">+7 925 044-04-04</a></li>
+                <li class="mail">
+                  <a href="mailto:hello@akaram.ru">hello@akaram.ru</a>
+                </li>
+                <li class="image-links">
+                  <div class="flex" style="gap: 10px">
+                    <span>
+                      <a href="#">
+                        <img src="img/watsapp.png" alt="" />
+                      </a>
+                    </span>
+                    <span>
+                      <a href="#">
+                        <img src="img/telegram.png" alt="" />
+                      </a>
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-text flex --just-space paddings">
+          <p class="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+            impedit ratione, repellat libero velit labore molestiae laudantium
+            itaque minima vero, magni numquam vel, eius ducimus illum maxime
+            ipsam quo dolore.
+          </p>
+          <a href="#">Пользовательское соглашение</a>
+          <a href="#">Публичная оферта</a>
+        </div>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <script src="js/libs.min.js"></script>
     <script src="js/code.js"></script>
-
-</body>
-
+  </body>
 </html>
