@@ -20,9 +20,9 @@
   </head>
 
   <body>
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
     <div class="popup__content" id="modal">
-      <div class="close">
+      <div class="close" onclick="closeModal()">
         <span></span>
         <span></span>
       </div>
@@ -194,7 +194,7 @@
           <div class="main__title_block">
             <h2>Клиника красоты и здоровья Анны Карамовой</h2>
             <div class="button-red-border">
-              <a href="#" class="record">{Записаться}</a>
+              <a href="#" class="record" onclick="openModal()">{Записаться}</a>
             </div>
           </div>
           <div class="swiper mainSlider">

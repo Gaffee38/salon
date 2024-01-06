@@ -1,55 +1,51 @@
 // Модальное окно "записаться"
 const bodyNode = document.body || document.getElementsByTagName("body")[0];
-const record = document.querySelector(".record");
 
-if (record != null) {
-  record.addEventListener("click", function () {
-    document.getElementById("overlay").classList.add("is-visible");
-    document.getElementById("modal").classList.add("is-visible");
-    bodyNode.classList.add("fix");
-  });
+function openModal() {
+  document.getElementById("overlay").classList.add("is-visible");
+  document.getElementById("modal").classList.add("is-visible");
+  bodyNode.classList.add("fix");
+}
 
-  document.querySelector(".close").addEventListener("click", function () {
-    document.getElementById("overlay").classList.remove("is-visible");
-    document.getElementById("modal").classList.remove("is-visible");
-    bodyNode.classList.remove("fix");
-  });
-  document.getElementById("overlay").addEventListener("click", function () {
-    document.getElementById("overlay").classList.remove("is-visible");
-    document.getElementById("modal").classList.remove("is-visible");
-    bodyNode.classList.remove("fix");
-  });
+function closeModal() {
+  document.getElementById("overlay").classList.remove("is-visible");
+  document.getElementById("modal").classList.remove("is-visible");
+  bodyNode.classList.remove("fix");
 }
 
 const screenWidth = window.screen.width;
 const mobile = document.querySelector(".mobile");
 const desctop = document.querySelector(".desctop");
 function getScreenWidth() {
-  if (screenWidth > 768) {
-    desctop.classList.add("visible");
-    $(".tabs-wrapper").each(function () {
-      let e = $(this);
-      e.find(".tab-item").not(":first").hide(),
-        e
-          .find(".tab")
-          .click(function () {
-            e
-              .find(".tab")
-              .removeClass("active")
-              .eq($(this).index())
-              .addClass("active"),
-              e.find(".tab-item").hide().eq($(this).index()).fadeIn(50);
-          })
-          .eq(0)
-          .addClass("active");
-    });
+  if (mobile != null && desctop != null) {
+    if (screenWidth > 768) {
+      desctop.classList.add("visible");
+      $(".tabs-wrapper").each(function () {
+        let e = $(this);
+        e.find(".tab-item").not(":first").hide(),
+          e
+            .find(".tab")
+            .click(function () {
+              e
+                .find(".tab")
+                .removeClass("active")
+                .eq($(this).index())
+                .addClass("active"),
+                e.find(".tab-item").hide().eq($(this).index()).fadeIn(50);
+            })
+            .eq(0)
+            .addClass("active");
+      });
+    } else {
+      mobile.classList.add("visible");
+      $(".select").change(function () {
+        $(".tab-item").removeClass("active");
+        var SelectOption = $(".select").val();
+        $(".tab-item[data-tab=" + SelectOption + "]").addClass("active");
+      });
+    }
   } else {
-    mobile.classList.add("visible");
-    $(".select").change(function () {
-      $(".tab-item").removeClass("active");
-      var SelectOption = $(".select").val();
-      $(".tab-item[data-tab=" + SelectOption + "]").addClass("active");
-    });
+    return false;
   }
 }
 getScreenWidth();
@@ -71,79 +67,79 @@ $(".logo__wrapper").on("click", ".burger", function () {
 
 // Слайдеры
 var swiper0 = new Swiper(".mainSlider", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    navigation: { nextEl: ".main-next", prevEl: ".main-prev" },
-  }),
-  swiper = new Swiper(".staffSlider", {
-    slidesPerView: 4,
-    spaceBetween: 0,
-    navigation: { nextEl: ".staff-next", prevEl: ".staff-prev" },
-    breakpoints: {
-      320: { slidesPerView: 1.2, spaceBetween: 20 },
-      500: { slidesPerView: 2.4, spaceBetween: 20 },
-      768: { slidesPerView: 3, spaceBetween: 20 },
-      1024: { slidesPerView: 4, spaceBetween: 0 },
-    },
-  }),
-  swiper2 = new Swiper(".productsSlider", {
-    slidesPerView: 4,
-    spaceBetween: 5,
-    navigation: { nextEl: ".products-next", prevEl: ".products-prev" },
-    breakpoints: {
-      320: { slidesPerView: 1.2, spaceBetween: 20 },
-      500: { slidesPerView: 2.4, spaceBetween: 20 },
-      768: { slidesPerView: 3, spaceBetween: 20 },
-      1024: { slidesPerView: 4, spaceBetween: 0 },
-    },
-  }),
-  swiper3 = new Swiper(".equipmentSlider", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    navigation: { nextEl: ".equipment-next", prevEl: ".equipment-prev" },
-  }),
-  swiper4 = new Swiper(".resultsSlider", {
-    slidesPerView: 2,
-    spaceBetween: 5,
-    navigation: { nextEl: ".results-next", prevEl: ".results-prev" },
-    breakpoints: {
-      320: { slidesPerView: 1.2, spaceBetween: 20 },
-      768: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 2, spaceBetween: 0 },
-    },
-  }),
-  swiper5 = new Swiper(".feedbacksSlider", {
-    slidesPerView: 4,
-    spaceBetween: 5,
-    navigation: { nextEl: ".feedback-next", prevEl: ".feedback-prev" },
-    breakpoints: {
-      320: { slidesPerView: 1.2, spaceBetween: 20 },
-      500: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 4, spaceBetween: 5 },
-    },
-  }),
-  swiper6 = new Swiper(".smallSlider", {
-    spaceBetween: 10,
-    slidesPerView: 3,
-    direction: "horizontal",
-    watchSlidesProgress: !0,
-    breakpoints: { 1024: { direction: "vertical" } },
-  }),
-  swiper7 = new Swiper(".bigSlider", {
-    spaceBetween: 10,
-    thumbs: { swiper: swiper6 },
-  }),
-  swiper8 = new Swiper(".tabsInfo", {
-    slidesPerView: 4,
-    spaceBetween: 10,
-    navigation: { nextEl: ".tabs-next", prevEl: ".tabs-prev" },
-    breakpoints: {
-      320: { slidesPerView: 3, spaceBetween: 10 },
-      500: { slidesPerView: 4, spaceBetween: 10 },
-      901: { slidesPerView: 3, spaceBetween: 10 },
-      1024: { slidesPerView: 4, spaceBetween: 10 },
-    },
-  });
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: { nextEl: ".main-next", prevEl: ".main-prev" },
+});
+var swiper = new Swiper(".staffSlider", {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  navigation: { nextEl: ".staff-next", prevEl: ".staff-prev" },
+  breakpoints: {
+    320: { slidesPerView: 1.2, spaceBetween: 20 },
+    500: { slidesPerView: 2.4, spaceBetween: 20 },
+    768: { slidesPerView: 3, spaceBetween: 20 },
+    1024: { slidesPerView: 4, spaceBetween: 0 },
+  },
+});
+var swiper2 = new Swiper(".productsSlider", {
+  slidesPerView: 4,
+  spaceBetween: 5,
+  navigation: { nextEl: ".products-next", prevEl: ".products-prev" },
+  breakpoints: {
+    320: { slidesPerView: 1.2, spaceBetween: 20 },
+    500: { slidesPerView: 2.4, spaceBetween: 20 },
+    768: { slidesPerView: 3, spaceBetween: 20 },
+    1024: { slidesPerView: 4, spaceBetween: 0 },
+  },
+});
+var swiper3 = new Swiper(".equipmentSlider", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: { nextEl: ".equipment-next", prevEl: ".equipment-prev" },
+});
+var swiper4 = new Swiper(".resultsSlider", {
+  slidesPerView: 2,
+  spaceBetween: 5,
+  navigation: { nextEl: ".results-next", prevEl: ".results-prev" },
+  breakpoints: {
+    320: { slidesPerView: 1.2, spaceBetween: 20 },
+    768: { slidesPerView: 2, spaceBetween: 20 },
+    1024: { slidesPerView: 2, spaceBetween: 0 },
+  },
+});
+var swiper5 = new Swiper(".feedbacksSlider", {
+  slidesPerView: 4,
+  spaceBetween: 5,
+  navigation: { nextEl: ".feedback-next", prevEl: ".feedback-prev" },
+  breakpoints: {
+    320: { slidesPerView: 1.2, spaceBetween: 20 },
+    500: { slidesPerView: 2, spaceBetween: 20 },
+    1024: { slidesPerView: 4, spaceBetween: 5 },
+  },
+});
+var swiper6 = new Swiper(".smallSlider", {
+  spaceBetween: 10,
+  slidesPerView: 3,
+  direction: "horizontal",
+  watchSlidesProgress: !0,
+  breakpoints: { 1024: { direction: "vertical" } },
+});
+var swiper7 = new Swiper(".bigSlider", {
+  spaceBetween: 10,
+  thumbs: { swiper: swiper6 },
+});
+var swiper8 = new Swiper(".tabsInfo", {
+  slidesPerView: 4,
+  spaceBetween: 10,
+  navigation: { nextEl: ".tabs-next", prevEl: ".tabs-prev" },
+  breakpoints: {
+    320: { slidesPerView: 3, spaceBetween: 10 },
+    500: { slidesPerView: 4, spaceBetween: 10 },
+    901: { slidesPerView: 3, spaceBetween: 10 },
+    1024: { slidesPerView: 4, spaceBetween: 10 },
+  },
+});
 
 // Увеличивание количества товаров в корзине
 $(".quantity_inner .bt_minus").click(function () {
