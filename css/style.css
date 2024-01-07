@@ -1716,6 +1716,15 @@ ul {
 .about_doctor__block-info .tabs-wrapper .tab-item .swiper{
   padding: 0 !important;
 }
+.about_doctor__block-info .tabs-wrapper .tab-item .swiper .swiper-slide a{
+  display: flex;
+  overflow: hidden;
+  height: 130px;
+}
+.about_doctor__block-info .tabs-wrapper .tab-item .swiper .swiper-slide a img{
+  object-fit: cover;
+  object-position: center;
+}
 .about_doctor__block-info .tabs-wrapper .tab-item .swiper .underslider-buttons{
   margin-top: 10px;
 }
